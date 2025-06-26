@@ -4,22 +4,105 @@
         <title>Search</title>
     </head>
     <body>
+        <h1>Ecosia search</h1>
         <form action="https://www.ecosia.org/search" method="get">
             <label for="search">What are you searching for?</label>
             <input id="search" type="text" name="q">
             <button type="submit">Search</button>
         </form>
 
+        <h1>DuckDuckGo search</h1>
         <form action="https://duckduckgo.com" method="get">
             <label for="search">Searching for?</label>
             <input id="search" type="text" name="q">
             <button type="submit">Search</button>
         </form>
 
+        <h1>Google search</h1>
         <form action="https://google.com/search" method="get">
             <label for="search">Search google!</label>
             <input id="search" type="text" name="q">
             <button type="submit">Go!</button>
+        </form>
+
+        <hr>
+        <h1>Instrumen cable search</h1>
+        <form action="https://www.thomann.de/intl/instrument_cables.html" method="get">
+            <div>
+                <label for="sort">Sort:</label>
+                <select name="oa" id="sort">
+                    <option value="" disabled selected>Please choose...</option>
+                    <option value="smb">Popularity</option>
+                    <option value="pra">Price low to high</option>
+                    <option value="prd">Price high to low</option>
+                    <option value="rat">Newest first</option>
+                    <option value="ala">Alphabet A to Z</option>
+                    <option value="ald">Alphabet Z to A</option>
+                </select>
+            </div>
+            <div>
+                <label>Price (from-to)</label>
+                <input type="number" min="0" step="0.01" name="price-first" value="0" required>
+                <input type="number" max="1000" step="0.01" name="price-last" value="1000" required>
+            </div>
+            <div>
+                <label>Length (from-to)</label>
+                <input  type="number" min="0" step="0.01" name="feature-57478-first" value="0" required>
+                <input  type="number" max="100" step="0.01" name="feature-57478-last" value="100" required>
+            </div>
+            <div>
+                <label for="feature-57478">Length</label>
+                <input type="range" id="feature-57478" step="1" name="feature-57478" min="0" max="20">
+            </div>
+            <div>
+                <input id="in-stock" type="checkbox" value="true" name="vf">
+                <label for="in-stock">In stock</label>
+            </div>
+            <div>
+                <label><input type="checkbox" value="5" name="rating[]"> 5</label>
+                <label><input type="checkbox" value="4" name="rating[]"> 4</label>
+                <label><input type="checkbox" value="3" name="rating[]"> 3</label>
+                <label><input type="checkbox" value="2" name="rating[]"> 2</label>
+                <label><input type="checkbox" value="1" name="rating[]"> 1</label>
+            </div>
+            <div>
+                <label>Color</label>
+                <label><input type="checkbox" value="Red" name="feature-45225">Red</label>
+                <label><input type="checkbox" value="Black" name="feature-45225">Black</label>
+                <label><input type="checkbox" value="Blue" name="feature-45225">Blue</label>
+            </div>
+             <div>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <form action="https://www.thomann.de/intl/headphones_studio_headphones.html" method="get">
+            <div>
+                <p>Replacable cable</p>
+                <label><input type="radio" value="true" name="feature-50863">Yes</label>
+                <label><input type="radio "value="false" name="feature-50863">No</label>
+                <label><input type="radio "value="all" name="feature-50863">All</label>
+            </div>
+            <div>
+                <label>Price (from-to)</label>
+                <input type="number" min="0" step="0.01" name="price-first" value="0" required>
+                <input type="number" max="1000" step="0.01" name="price-last" value="1000" required>
+            </div>
+            <div>
+                <input id="in-stock" type="checkbox" value="true" name="vf">
+                <label for="in-stock">In stock</label>
+            </div>
+            <div>
+                <p>Rating</p>
+                <label><input type="checkbox" value="5" name="rating[]"> 5</label>
+                <label><input type="checkbox" value="4" name="rating[]"> 4</label>
+                <label><input type="checkbox" value="3" name="rating[]"> 3</label>
+                <label><input type="checkbox" value="2" name="rating[]"> 2</label>
+                <label><input type="checkbox" value="1" name="rating[]"> 1</label>
+            </div>
+            <div>
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </div>
         </form>
     </body>
 </html>
